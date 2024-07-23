@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style-card.css">
+    <link rel="stylesheet" href="CSS/style-formulario.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Quadro de tarefas</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Task Board</h1>
+    </header>
+    <main>
+        <section class = "lista">
+        <h2>TO-DO</h2>
+        <ul id="TO-DO">
+            <li class="card">
+                <div class="card-head">
+                    <h3 class="card-titulo">Titulo</h3>
+                </div>
+                <p class="card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque molestias, suscipit nisi eaque perspiciatis dolore laborum recusandae quod quam quis? Praesentium nam quasi sequi et deserunt! Quam necessitatibus quibusdam nostrum?</p>
+                <p class = card-data>Data:</p>
+                <div class="card-controle">
+                    <button class="card-btn" style="left: 0px">
+                        <i class="material-icons">delete</i>
+                    </button>
+                    <button class="card-btn" style="right: 25px">
+                        <i class="material-icons">arrow_back</i>
+                    </button>
+                    <button class="card-btn" style="right: 0;">
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
+                    <button class="card-btn" style="right: 75px;">
+                        <i class="material-icons">arrow_upward</i>
+                    </button>
+                    <button class="card-btn" style="right: 100px;">
+                        <i class="material-icons">arrow_downward</i>
+                    </button>
+                </div>
+            </li> 
+        </ul>      
+        </section>
+        <div class="divisoria"></div>
+        <section class="lista">
+            <h2>DOING</h2>
+            <ul id="DOING">
+                <li class="card">
+                    <div class="card-head">
+                        <h3 class="card-titulo">Titulo</h3>
+                    </div>
+                    <p class="card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque molestias, suscipit nisi eaque perspiciatis dolore laborum recusandae quod quam quis? Praesentium nam quasi sequi et deserunt! Quam necessitatibus quibusdam nostrum?</p>
+                    <p class = card-data>Data:</p>
+                    <div class="card-controle">
+                        <button class="card-btn" style="left: 0px">
+                            <i class="material-icons">delete</i>
+                        </button>
+                        <button class="card-btn" style="right: 25px">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                        <button class="card-btn" style="right: 0;">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                        <button class="card-btn" style="right: 75px;">
+                            <i class="material-icons">arrow_upward</i>
+                        </button>
+                        <button class="card-btn" style="right: 100px;">
+                            <i class="material-icons">arrow_downward</i>
+                        </button>
+                    </div>
+                </li> 
+            </ul>
+        </section>
+        <div class="divisoria"></div>
+        <section class="lista">
+            <h2>DONE</h2>
+            <ul id="DONE">
+                <li class="card">
+                    <div class="card-head">
+                        <h3 class="card-titulo">Titulo</h3>
+                    </div>
+                    <p class="card-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque molestias, suscipit nisi eaque perspiciatis dolore laborum recusandae quod quam quis? Praesentium nam quasi sequi et deserunt! Quam necessitatibus quibusdam nostrum?</p>
+                    <p class = card-data>Data:</p>
+                    <div class="card-controle">
+                        <button class="card-btn" style="left: 0px">
+                            <i class="material-icons">delete</i>
+                        </button>
+                        <button class="card-btn" style="right: 25px">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                        <button class="card-btn" style="right: 0;">
+                            <i class="material-icons">arrow_forward</i>
+                        </button>
+                        <button class="card-btn" style="right: 75px;">
+                            <i class="material-icons">arrow_upward</i>
+                        </button>
+                        <button class="card-btn" style="right: 100px;">
+                            <i class="material-icons">arrow_downward</i>
+                        </button>
+                    </div>
+                </li> 
+            </ul>
+        </section>
+
+    </main>
+
+    <button id="btn-add">
+        <i class="material-icons">add_circle</i>
+    </button>
+
+    <div class="formulario">
+        <h1>Task</h1>
+        <button class = "btn-fechar">
+            <i class="material-icons">close</i>
+        </button>
+        <h3>Titulo:</h3>
+        <input type="text" id="titulo">
+        <h3>Descrição:</h3>
+        <textarea name="Descrição" id="descricao"></textarea>
+        <h3>Data:</h3>
+        <input type="date" id="data">
+        <button class="btn-confirmar">
+            <i class="material-icons">check</i>
+        </button>
+        <p id="texto-diag">texto</p>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+</html>
