@@ -6,6 +6,11 @@ const titulo = document.querySelector("#titulo");
 const descricao = document.querySelector("#descricao");
 const data = document.querySelector("#data");
 const diag = document.querySelector("#texto-diag");
+const caixaDiag = document.querySelector(".caixa-diag");
+const btnConfirmaExcluir = document.querySelector(".btn-sim");
+const btnRejeitaExcluir = document.querySelector(".btn-nao");
+let card;
+let lista;
 
 
 btnAddFormulario.addEventListener("click", function(e) {
@@ -125,9 +130,22 @@ function criarCard(textoTitulo, textoDescricao, textoData){
 }
 
 function clickExcluir(e){
-    const card = e.target.parentElement.parentElement.parentElement;
-    const lista = card.parentElement;
+    caixaDiag.classList.add("show");
+    btnConfirmaExcluir.addEventListener('click',confirmaExclusao);
+    btnRejeitaExcluir.addEventListener('click',rejeitaExclusao);
+
+    card = e.target.parentElement.parentElement.parentElement;
+    lista = card.parentElement;
+    
+}
+
+function confirmaExclusao(e){
     lista.removeChild(card);
+    caixaDiag.classList.remove("show");
+}
+
+function rejeitaExclusao(e){
+    caixaDiag.classList.remove("show");
 }
 
 function clickDireita(e){

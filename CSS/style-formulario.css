@@ -45,8 +45,10 @@
 
 #data{
     margin-bottom: 10px;
-    width: 50%;
     border-radius: 5px;
+    width: 50%;
+    height: 50px;
+
 }
 
 .formulario.show {
@@ -60,6 +62,7 @@
     top: 5px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .btn-confirmar{
@@ -68,9 +71,47 @@
     bottom: 5px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 #texto-diag{
     height: 10px;
     visibility: hidden;    
+}
+
+.caixa-diag{
+    display: flex; 
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(119, 161, 1);
+   /* visibility: hidden;
+    opacity: 0;*/
+}
+
+.caixa-diag p{
+    position: absolute;
+}
+
+.btn-sim{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background: none;
+    border: none;
+    cursor: pointer; 
+}
+
+.btn-nao{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: none;
+    border: none; 
+    cursor: pointer;
 }

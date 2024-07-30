@@ -11,6 +11,8 @@ header {
     background-color: rgb(211, 173, 2);
     padding: 20px;
     border-radius: 5px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -24,6 +26,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     height: auto;
+    max-width: 900px;
+    margin-top: 10px;
+    margin: 20px auto;
 }
 
 .lista {
