@@ -1,5 +1,5 @@
-.formulario{  
-    display: flex; 
+.formulario {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
@@ -15,10 +15,10 @@
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 1);
     visibility: hidden;
     opacity: 0;
-    
+
 }
 
-.formulario h1{
+.formulario h1 {
     font-size: 25px;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -26,25 +26,25 @@
     right: 20px;
 }
 
-.formulario h3{
+.formulario h3 {
     text-align: center;
     margin: 0px;
 }
 
-.formulario input{
+.formulario input {
     margin-bottom: 10px;
     width: 50%;
     border-radius: 5px;
 }
 
-.formulario textarea{
+.formulario textarea {
     width: 100%;
     height: 200px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-#data{
+#data {
     margin-bottom: 10px;
     border-radius: 5px;
     width: 50%;
@@ -52,7 +52,7 @@
 
 }
 
-#texto-diag{
+#texto-diag {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
 }
 
@@ -61,7 +61,7 @@
     opacity: 1;
 }
 
-.btn-fechar{
+.btn-fechar {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 
-.btn-confirmar{
+.btn-confirmar {
     position: absolute;
     right: 5px;
     bottom: 5px;
@@ -79,13 +79,13 @@
     cursor: pointer;
 }
 
-#texto-diag{
+#texto-diag {
     height: 10px;
-    visibility: hidden;    
+    visibility: hidden;
 }
 
-.caixa-diag{
-    display: flex; 
+.caixa-diag {
+    display: flex;
     justify-content: center;
     position: absolute;
     top: 50%;
@@ -99,29 +99,29 @@
     opacity: 0;
 }
 
-.caixa-diag p{
+.caixa-diag p {
     position: absolute;
 }
 
-.caixa-diag.show{
+.caixa-diag.show {
     visibility: visible;
-    opacity: 1;   
+    opacity: 1;
 }
 
-.btn-sim{
+.btn-sim {
     position: absolute;
     left: 10px;
     bottom: 10px;
     background: none;
     border: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.btn-nao{
+.btn-nao {
     position: absolute;
     right: 10px;
     bottom: 10px;
     background: none;
-    border: none; 
+    border: none;
     cursor: pointer;
 }

@@ -5,7 +5,7 @@
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 1);
 }
 
-.card-head{
+.card-head {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -13,23 +13,23 @@
     align-items: center;
 }
 
-.card-titulo{
+.card-titulo {
     text-align: center;
     margin: 0;
 }
 
-.card-desc{
+.card-desc {
     height: auto;
     margin-bottom: 0px;
 }
 
-.card-data{
+.card-data {
     margin-top: 5px;
     margin-bottom: 5px;
     /* background-color: blue; */
 }
 
-.card-controle{
+.card-controle {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -37,11 +37,11 @@
     align-items: center;
     height: 25px;
     margin: 10px 5px 5px 5px;
-   /* background-color: red; */
-    
+    /* background-color: red; */
+
 }
 
-.card-btn{
+.card-btn {
     display: flex;
     position: absolute;
     padding: 8px;
@@ -54,4 +54,3 @@
     border: none;
     cursor: pointer;
 }
-

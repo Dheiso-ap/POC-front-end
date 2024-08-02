@@ -1,5 +1,5 @@
 const btnAddFormulario = document.querySelector("#btn-add");
-const formulario = document.querySelector(".formulario"); 
+const formulario = document.querySelector(".formulario");
 const btnFecharFormulario = document.querySelector(".btn-fechar");
 const btnConfirmarFormulario = document.querySelector(".btn-confirmar");
 const titulo = document.querySelector("#titulo");
@@ -13,29 +13,29 @@ let card;
 let lista;
 
 
-btnAddFormulario.addEventListener("click", function(e) {
-  e.preventDefault();
-  
-  diag.textContent = '';
-  diag.style.color = 'black';
-  formulario.classList.add('show');
+btnAddFormulario.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    diag.textContent = '';
+    diag.style.color = 'black';
+    formulario.classList.add('show');
 });
 
-btnFecharFormulario.addEventListener("click", function(e) {
+btnFecharFormulario.addEventListener("click", function (e) {
     e.preventDefault();
 
     formulario.classList.remove('show');
 });
 
-btnConfirmarFormulario.addEventListener("click", function(e){
+btnConfirmarFormulario.addEventListener("click", function (e) {
     e.preventDefault();
-    if(titulo.value == '' || descricao.value == '' || data.value == ''){
+    if (titulo.value == '' || descricao.value == '' || data.value == '') {
         diag.textContent = "Todos os campos devem ser preenchidos!";
         diag.style.color = 'red';
         diag.style.visibility = 'visible';
-    }else {
+    } else {
         const listaToDo = document.querySelector('#TO-DO');
-        const item = criarCard(titulo.value,descricao.value,data.value);
+        const item = criarCard(titulo.value, descricao.value, data.value);
         listaToDo.appendChild(item);
         formulario.classList.remove('show');
         titulo.value = '';
@@ -45,7 +45,7 @@ btnConfirmarFormulario.addEventListener("click", function(e){
 
 });
 
-function criarCard(textoTitulo, textoDescricao, textoData){
+function criarCard(textoTitulo, textoDescricao, textoData) {
     const itemLista = document.createElement('li');
     const areaTitulo = document.createElement('div');
     const titulo = document.createElement('h3');
@@ -83,21 +83,21 @@ function criarCard(textoTitulo, textoDescricao, textoData){
 
     btnExcluir.className = 'card-btn';
     btnExcluir.style.left = "0px";
-    btnExcluir.addEventListener('click',clickExcluir);
+    btnExcluir.addEventListener('click', clickExcluir);
     iconExcluir.className = 'material-icons';
     iconExcluir.textContent = 'delete';
     btnExcluir.appendChild(iconExcluir);
 
     btnDireita.className = 'card-btn';
     btnDireita.style.right = "0px";
-    btnDireita.addEventListener('click',clickDireita);
+    btnDireita.addEventListener('click', clickDireita);
     iconDireita.className = 'material-icons';
     iconDireita.textContent = 'arrow_forward';
     btnDireita.appendChild(iconDireita);
 
     btnEsquerda.className = 'card-btn';
     btnEsquerda.style.right = '25px';
-    btnEsquerda.addEventListener('click',clickEsquerda);
+    btnEsquerda.addEventListener('click', clickEsquerda);
     iconEsquerda.className = 'material-icons';
     iconEsquerda.textContent = 'arrow_back';
     btnEsquerda.appendChild(iconEsquerda);
@@ -129,56 +129,56 @@ function criarCard(textoTitulo, textoDescricao, textoData){
 
 }
 
-function clickExcluir(e){
+function clickExcluir(e) {
     caixaDiag.classList.add("show");
-    btnConfirmaExcluir.addEventListener('click',confirmaExclusao);
-    btnRejeitaExcluir.addEventListener('click',rejeitaExclusao);
+    btnConfirmaExcluir.addEventListener('click', confirmaExclusao);
+    btnRejeitaExcluir.addEventListener('click', rejeitaExclusao);
 
     card = e.target.parentElement.parentElement.parentElement;
     lista = card.parentElement;
-    
+
 }
 
-function confirmaExclusao(e){
+function confirmaExclusao(e) {
     lista.removeChild(card);
     caixaDiag.classList.remove("show");
 }
 
-function rejeitaExclusao(e){
+function rejeitaExclusao(e) {
     caixaDiag.classList.remove("show");
 }
 
-function clickDireita(e){
+function clickDireita(e) {
     const card = e.target.parentElement.parentElement.parentElement;
     const listaAtual = card.parentElement;
-  
-    switch(listaAtual.id){
+
+    switch (listaAtual.id) {
         case 'TO-DO':
             const listaDoing = document.querySelector('#DOING');
             listaDoing.appendChild(card);
-        break;
+            break;
         case 'DOING':
             const listaDone = document.querySelector('#DONE');
             listaDone.appendChild(card);
-        break;
+            break;
 
     }
 }
 
-function clickEsquerda(e){
+function clickEsquerda(e) {
     const card = e.target.parentElement.parentElement.parentElement;
     const listaAtual = card.parentElement;
-  
-    switch(listaAtual.id){
+
+    switch (listaAtual.id) {
         case 'DONE':
             const listaDoing = document.querySelector('#DOING');
             listaDoing.appendChild(card);
-        break;
+            break;
         case 'DOING':
             const listaToDo = document.querySelector('#TO-DO');
             listaToDo.appendChild(card);
-        break;
-              
+            break;
+
     }
 }
 
